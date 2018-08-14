@@ -116,10 +116,14 @@ It removes those files on your local disk
 ## Commands at Remote Network
 
 make docker_load
+---
+
 The following commands can be used in remote network. 
 To use them, whole directory need to be tranfered to the destination network
 
 make verify_check_sum
+---
+
 Verifies check sums of transfered files on the remote network.
 
 To get further information about make commands,please,check out once `makefile` to see details about make commands.
