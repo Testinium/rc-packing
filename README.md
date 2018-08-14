@@ -1,7 +1,7 @@
 
 # RC-Packing
 
-This project is collecting some dependecies over exteral resources and Docker Images over public or private Docker Registry Service.
+This project is collecting some dependencies over exteral resources and Docker Images over public or private Docker Registry Service.
 
 After saving on local network, the package is being transferred to remote network via a SFTP connection.
 
@@ -27,7 +27,7 @@ DOCKER_REG_DOMAIN :=https://index.docker.io/v1/
 ```
 
 1. Please, update those variables in `makefile` according to your demands and system.
-2. Please, modify the following files to add a new dependecy and Docker Image name. To extend your batch operations for SFTP, Please, change commands files, below.
+2. Please, modify the following files to add a new dependency and Docker Image name. To extend your batch operations for SFTP, Please, change commands files, below.
     - nexus.list
     - docker.list
     - commands_project.txt
@@ -46,8 +46,8 @@ To apply sequantialy commands in a pipeline, you can directly use `make put_pack
 make nexus
 ---
 
-Downloads dependecies over Nexus. 
-To add a new dependecy, you can add its full link into `nexus.list`
+Downloads dependencies over Nexus. 
+To add a new dependency, you can add its full link into `nexus.list`
 
 make docker_save
 ---
@@ -62,7 +62,7 @@ Please, note that, you need to enter your password to reach your private Docker 
 make check_sum
 ---
 
-Creates check sums for each dependecies and Docker Images, to verify transfered files subsequently their check sums
+Creates check sums for each dependencies and Docker Images, to verify transfered files subsequently their check sums
 under to remote network
 
 make tar_packages
@@ -111,7 +111,7 @@ Removes all pulled images you asked in `docker.list` over local Docker engine
 make rm_packages
 ---
 
-Nexus's dependecies and Docker Images are saving under directory `packages`.
+Nexus's dependencies and Docker Images are saving under directory `packages`.
 It removes those files on your local disk
 
 ## Commands at Remote Network
