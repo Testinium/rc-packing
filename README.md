@@ -1,13 +1,13 @@
 
 # RC-Packing
 
-This project is collecting some dependencies over exteral resources and Docker Images over public or private Docker Registry Service.
+This project is collecting some dependencies over external resources and Docker Images over public or private Docker Registry Service.
 
-After saving on local network, the package is being transferred to remote network via a SFTP connection.
+After saving files on local network, the files is being transferred as a tar file to remote network via a SFTP connection.
 
 # Settings
 
-You can see some configurable settings, in the first couple lines of `makefile` file like below:
+You can see some configurable settings, in the first couple lines of `makefile` like below:
 
 ```makefile
 # SFTP Configurations
