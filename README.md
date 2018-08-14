@@ -41,7 +41,7 @@ To get further information about make commands, please,check out `makefile`.
 
 ## Commands at Local Network
 
-To apply sequantialy commands in a pipeline, you can directly use `make put_packages`. If you want to apply steps individually on command prompt, you take use the following commands whatever you want to do at local or remote network.
+To apply commands sequentially in a pipeline, you can directly hit `make put_packages` on your command prompt. If you want to apply each steps individually and manually, you can use the following commands whatever you want to do at local or remote network.
 
 make nexus
 ---
