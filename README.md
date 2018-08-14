@@ -40,6 +40,8 @@ We created a bunch of commands in `makefile` to help you and speed up your filin
 
 ## Commands at Local Network
 
+To apply sequantialy commands in a pipeline, you can directly use `make put_packages`. If you want to apply steps individually on command prompt, you take use the following commands whatever you want to do at local or remote network.
+
 make nexus
 ---
 
@@ -56,29 +58,18 @@ To extend docker images, you added Docker Image's TAG into `docker.list`
 You can added public or private Docker Image's name into the same file, `docker.list`
 Please, note that, you need to enter your password to reach your private Docker images
 
-make docker_rmi
----
-
-Removes all pulled images you asked in `docker.list` over local Docker engine
-
-rm_packages
----
-
-Nexus's dependecies and Docker Images are saving under directory `packages`.
-It removes those files on your local disk
-
-check_sum
+make check_sum
 ---
 
 Creates check sums for each dependecies and Docker Images, to verify transfered files subsequently their check sums
 under to remote network
 
-tar_packages
+make tar_packages
 ---
 
 Before transfering desired files, it creates a tar for directory packages.
 
-tar_project
+make tar_project
 ---
 
 Creates whole projects except for a few directories, ssh, data, .git, .gitignore
@@ -111,14 +102,25 @@ make put_packages
 
 Puts `packages.tar` to remote network
 
-OPERATIONS at REMOTE NETWORK ===========================================================================
+make docker_rmi
+---
 
-The following commands can be used in Bank's network. 
+Removes all pulled images you asked in `docker.list` over local Docker engine
+
+make rm_packages
+---
+
+Nexus's dependecies and Docker Images are saving under directory `packages`.
+It removes those files on your local disk
+
+## Commands at Remote Network
+
+make docker_load
+The following commands can be used in remote network. 
 To use them, whole directory need to be tranfered to the destination network
-docker_load:
 
+make verify_check_sum
 Verifies check sums of transfered files on the remote network.
-verify_check_sum:
 
 To get further information about make commands,please,check out once `makefile` to see details about make commands.
 
