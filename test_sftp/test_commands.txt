@@ -1,0 +1,4 @@
+ls
+put makefile
+ls
+bye

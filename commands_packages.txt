@@ -1,0 +1,5 @@
+pwd
+ls
+put packages.tar
+ls
+bye

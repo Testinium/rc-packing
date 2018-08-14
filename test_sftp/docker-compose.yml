@@ -1,0 +1,14 @@
+version: "3"
+services:
+    sftp:
+        image: atmoz/sftp
+        container_name: "sftp-server"
+        volumes:
+            - ./ssh/id_rsa.pub:/home/foo/.ssh/keys/id_rsa.pub:ro
+            - ./ssh/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key
+            - ./ssh/ssh_host_rsa_key:/etc/ssh/ssh_host_rsa_key
+            - ./data/:/home/foo/share
+            - ./init.sh:/etc/sftp.d/init.sh:ro
+        ports:
+            - "22:22"
+        command: foo::1001
