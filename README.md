@@ -37,6 +37,7 @@ DOCKER_REG_DOMAIN :=https://index.docker.io/v1/
 # Commands
 We created a bunch of commands in `makefile` to help you and speed up your filing operations local and remote network. Those commands are like below.
 
+To get further information about make commands, please,check out `makefile`.
 
 ## Commands at Local Network
 
@@ -125,7 +126,5 @@ make verify_check_sum
 ---
 
 Verifies check sums of transfered files on the remote network.
-
-To get further information about make commands,please,check out once `makefile` to see details about make commands.
 
 
