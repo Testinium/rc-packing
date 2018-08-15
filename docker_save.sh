@@ -7,9 +7,6 @@ then
 fi
 
 docker logout
-# export DOCKER_ID_USER="dckrer"
-# export DOCKER_REG_DOMAIN=https://index.docker.io/v1/
-# docker login $DOCKER_REG_DOMAIN -u $DOCKER_ID_USER
 docker login $1 -u $2
 
 DIR=./packages
@@ -20,6 +17,8 @@ fi
 
 for tag in $(cat docker.list); do
     f=$DIR"/"$tag".img"
+    f=`echo $f | sed "s/$2\//$2_/g"`
+
     if [ ! -f "$f" ]
     then
         echo "$f creating..."
