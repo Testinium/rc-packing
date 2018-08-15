@@ -2,4 +2,4 @@ nginx:1.14-perl
 busybox:musl
 busybox:1-musl
 httpd:2.4.34
-dckrer/deneme2:latest
+dckrer/deneme2:aaa
